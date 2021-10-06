@@ -2,64 +2,50 @@ import Board from './components/Board/Board';
 import Game from './components/Game/Game';
 import classes from './App.module.css';
 import { useState } from 'react';
+import { shuffleArray } from './utils/helpers';
+
+const players = [
+    {
+        name: 'Martin',
+    },
+    {
+        name: 'Thibaut',
+    },
+    {
+        name: 'Nicolas',
+    },
+    {
+        name: 'Corentin',
+    },
+    {
+        name: 'Benjamin',
+    },
+];
 
 function App() {
-    const [players, setPlayers] = useState([
-        {
-            name: 'Martin',
-            current: true,
-        },
-        {
-            name: 'Thibaut',
-            current: false,
-        },
-        {
-            name: 'Nicolas',
-            current: false,
-        },
-        {
-            name: 'Corentin',
-            current: false,
-        },
-        {
-            name: 'Benjamin',
-            current: false,
-        },
-    ]);
-
+    const roundPlayers = shuffleArray(players);
+    const [currentPlayer, setCurrentPlayer] = useState(roundPlayers[0].name);
     const [game, setGame] = useState([]);
-    // console.log(game);
 
     const handleOnPlay = (value) => {
         const currentPlayerIndex = players.findIndex(
-            (player) => player.current
+            (player) => player.name === currentPlayer
         );
-        let updatedPlayers = Array.from(players);
-        updatedPlayers[currentPlayerIndex] = {
-            ...updatedPlayers[currentPlayerIndex],
-            current: false,
-        };
         const nextPlayerIndex = (currentPlayerIndex + 1) % players.length;
-        updatedPlayers[nextPlayerIndex] = {
-            ...updatedPlayers[nextPlayerIndex],
-            current: true,
-        };
         setGame([
             ...game,
             {
-                player: players[currentPlayerIndex].name,
+                player: currentPlayer,
                 score: value,
             },
         ]);
-        setPlayers(updatedPlayers);
+        setCurrentPlayer(players[nextPlayerIndex].name);
     };
-
-    console.log(game);
 
     return (
         <div className={classes.App}>
-            <Game players={players} />
-            <Board onPlay={handleOnPlay} />
+            <Game currentPlayer={currentPlayer} />
+            <Board onPlay={handleOnPlay} game={game} players={players} />
         </div>
     );
 }

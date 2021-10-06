@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button';
+import Score from '../Score/Score';
 import classes from './Board.module.css';
 
 const BUTTONS = [
@@ -49,7 +50,7 @@ const BUTTONS = [
     ],
 ];
 
-const Board = ({ onPlay }) => {
+const Board = ({ onPlay, game, players }) => {
     const [selected, setSelected] = useState();
 
     const handleButtonSelect = (value) => {
@@ -71,6 +72,7 @@ const Board = ({ onPlay }) => {
                     </div>
                 ))}
             </div>
+            <Score game={game} players={players} />
             {selected && (
                 <div className={classes.Action}>
                     <button
