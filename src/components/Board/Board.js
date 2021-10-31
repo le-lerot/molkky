@@ -73,8 +73,16 @@ const Board = ({ onPlay, game, players }) => {
                 ))}
             </div>
             <Score game={game} players={players} />
-            {selected && (
                 <div className={classes.Action}>
+                    <button
+                        onClick={() => {
+                            onPlay(selected);
+                            setSelected();
+                        }}
+						disabled
+                    >
+                        Annuler
+                    </button>
                     <button
                         onClick={() => {
                             onPlay(selected);
@@ -83,8 +91,7 @@ const Board = ({ onPlay, game, players }) => {
                     >
                         Valider
                     </button>
-                </div>
-            )}
+                </div> 
         </div>
     );
 };
