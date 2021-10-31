@@ -2,7 +2,7 @@ import Board from './components/Board/Board';
 import Game from './components/Game/Game';
 import classes from './App.module.css';
 import { useState } from 'react';
-import { shuffleArray } from './utils/helpers';
+//import { shuffleArray } from './utils/helpers';
 
 const players = [
     {
@@ -23,11 +23,16 @@ const players = [
 ];
 
 function App() {
-    const roundPlayers = shuffleArray(players);
+    const roundPlayers = players;
     const [currentPlayer, setCurrentPlayer] = useState(roundPlayers[0].name);
     const [game, setGame] = useState([]);
 
     const handleOnPlay = (value) => {
+		let currentValue = value
+		if (value === undefined)
+		{
+			currentValue = 0
+		}
         const currentPlayerIndex = players.findIndex(
             (player) => player.name === currentPlayer
         );
@@ -36,7 +41,7 @@ function App() {
             ...game,
             {
                 player: currentPlayer,
-                score: value,
+                score: currentValue,
             },
         ]);
         setCurrentPlayer(players[nextPlayerIndex].name);
