@@ -76,26 +76,26 @@ const Board = ({ onPlay, winner, scoreBoard, onNewGame}) => {
                 {winner && <WinnerBanner winner={winner} onNewGame={onNewGame} />}
             </div>
             <Score scoreBoard={scoreBoard} />
-                <div className={classes.Action}>
-                    <button
-                        onClick={() => {
-                            onPlay(selected);
-                            setSelected();
-                        }}
-						disabled
-                    >
-                        Annuler
-                    </button>
-                    <button
-                        onClick={() => {
-                            onPlay(selected);
-                            setSelected();
-                        }}
-                        disabled={winner}
-                    >
-                        Valider
-                    </button>
-                </div> 
+            <div className={classes.Action}>
+                <button
+                    onClick={() => {
+                        onPlay(selected);
+                        setSelected();
+                    }}
+                    disabled
+                >
+                    Annuler
+                </button>
+                <button
+                    onClick={() => {
+                        onPlay(selected);
+                        setSelected();
+                    }}
+                    disabled={winner}
+                >
+                    Valider
+                </button>
+            </div> 
         </div>
     );
 };

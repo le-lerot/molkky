@@ -10,6 +10,7 @@
 }
 .WinnerBanner {
     background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
 }
 .WinnerBanner p {
     color: #fff;
@@ -19,11 +20,11 @@
 }
 
 .WinnerBanner button {
-    position: fixed;    
     color: #fff;
     background-color: rgba(0,0,0, 0.8);
-    border: none;
-    width: 100%;
-    height: 2em;
     font-size: 20px;
+    border: 1px solid #fff;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
 }
