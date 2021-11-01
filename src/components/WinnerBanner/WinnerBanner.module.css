@@ -1,0 +1,30 @@
+.WinnerPage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.WinnerBanner {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+.WinnerBanner p {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    margin: 2.5em 0;
+}
+
+.WinnerBanner button {
+    color: #fff;
+    background-color: rgba(0,0,0, 0.8);
+    font-size: 20px;
+    border: 1px solid #fff;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}

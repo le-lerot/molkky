@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react/cjs/react.development';
 import Button from '../Button/Button';
 import Score from '../Score/Score';
+import WinnerBanner from '../WinnerBanner/WinnerBanner';
 import classes from './Board.module.css';
 
 const BUTTONS = [
@@ -50,12 +51,13 @@ const BUTTONS = [
     ],
 ];
 
-const Board = ({ onPlay, game, players }) => {
+const Board = ({ onPlay, winner, scoreBoard, onNewGame}) => {
     const [selected, setSelected] = useState();
 
     const handleButtonSelect = (value) => {
         setSelected((prevState) => (prevState === value ? null : value));
     };
+
     return (
         <div className={classes.Board}>
             <div className={classes.Buttons}>
@@ -71,27 +73,29 @@ const Board = ({ onPlay, game, players }) => {
                         ))}
                     </div>
                 ))}
+                {winner && <WinnerBanner winner={winner} onNewGame={onNewGame} />}
             </div>
-            <Score game={game} players={players} />
-                <div className={classes.Action}>
-                    <button
-                        onClick={() => {
-                            onPlay(selected);
-                            setSelected();
-                        }}
-						disabled
-                    >
-                        Annuler
-                    </button>
-                    <button
-                        onClick={() => {
-                            onPlay(selected);
-                            setSelected();
-                        }}
-                    >
-                        Valider
-                    </button>
-                </div> 
+            <Score scoreBoard={scoreBoard} />
+            <div className={classes.Action}>
+                <button
+                    onClick={() => {
+                        onPlay(selected);
+                        setSelected();
+                    }}
+                    disabled
+                >
+                    Annuler
+                </button>
+                <button
+                    onClick={() => {
+                        onPlay(selected);
+                        setSelected();
+                    }}
+                    disabled={winner}
+                >
+                    Valider
+                </button>
+            </div> 
         </div>
     );
 };
