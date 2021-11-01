@@ -1,24 +1,7 @@
 import React from 'react';
 import classes from './Score.module.css';
 
-const Score = ({ game, players }) => {
-    const result = game.reduce(
-        function (acc, current) {
-            const playerIndex = acc.findIndex(
-                (a) => a.player === current.player
-            );
-            const newPlayerScore = acc[playerIndex].score + current.score;
-            acc.splice(playerIndex, 1, {
-                player: current.player,
-                score: newPlayerScore,
-            });
-            return acc;
-        },
-        Array.from(players).map((player) => ({
-            player: player.name,
-            score: 0,
-        }))
-    );
+const Score = ({ scoreBoard }) => {
 
     return (
         <table className={classes.Table}>
@@ -29,11 +12,11 @@ const Score = ({ game, players }) => {
                 </tr>
             </thead>
             <tbody>
-                {result.map((round) => (
+                {scoreBoard.map((player) => (
                     // <tr key={round.id}> is better
-                    <tr key={round.player}>
-                        <td>{round.player}</td>
-                        <td>{round.score}</td>
+                    <tr key={player.name}>
+                        <td>{player.name}</td>
+                        <td>{player.score}</td>
                     </tr>
                 ))}
             </tbody>
