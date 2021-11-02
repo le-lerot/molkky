@@ -1,6 +1,7 @@
 {
   "name": "molky",
   "version": "0.1.0",
+  "homepage": "https://le-lerot.github.io/molky",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
