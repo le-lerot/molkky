@@ -1,4 +1,4 @@
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 import Button from '../Button/Button';
 import Score from '../Score/Score';
 import WinnerBanner from '../WinnerBanner/WinnerBanner';
