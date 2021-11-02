@@ -1,5 +1,5 @@
 import Board from './components/Board/Board';
-import Game from './components/Game/Game';
+import Header from './components/Header/Header';
 import classes from './App.module.css';
 import { useState } from 'react/cjs/react.development';
 //import { shuffleArray } from './utils/helpers';
@@ -22,12 +22,10 @@ const players = [
     },
 ];
 
-const initialScoreBoard = players.map(player => (
-    {
-        name: player.name,
-        score: 0,
-    }
-))
+const initialScoreBoard = players.map((player) => ({
+    name: player.name,
+    score: 0,
+}));
 
 function App() {
     const roundPlayers = players;
@@ -40,13 +38,12 @@ function App() {
     const [scoreBoard, setScoreBoard] = useState(initialScoreBoard);
 
     const handleOnPlay = (value) => {
-		let currentValue = value
-        let gameOver = false
-		if (value === undefined)
-		{
-			currentValue = 0
-		}
-        
+        let currentValue = value;
+        let gameOver = false;
+        if (value === undefined) {
+            currentValue = 0;
+        }
+
         setGame([
             ...game,
             {
@@ -55,27 +52,24 @@ function App() {
             },
         ]);
 
-        const updatedScoreBoard = scoreBoard.map(player => {
-            if (currentPlayer === player.name)
-            {
-                const updatedScore = player.score + currentValue
-                if (updatedScore >= 50)
-                {
+        const updatedScoreBoard = scoreBoard.map((player) => {
+            if (currentPlayer === player.name) {
+                const updatedScore = player.score + currentValue;
+                if (updatedScore >= 50) {
                     setWinner(currentPlayer);
                     gameOver = true;
                     console.log(`GameOver: ${gameOver}`);
                 }
                 return {
                     ...player,
-                    score: player.score + currentValue
-                }
+                    score: player.score + currentValue,
+                };
             }
             return player;
-        })
+        });
         setScoreBoard(updatedScoreBoard);
 
-        if (!gameOver)
-        {
+        if (!gameOver) {
             const currentPlayerIndex = players.findIndex(
                 (player) => player.name === currentPlayer
             );
@@ -85,14 +79,19 @@ function App() {
     };
 
     const handleOnNewGame = () => {
-		setScoreBoard(initialScoreBoard);
+        setScoreBoard(initialScoreBoard);
         setWinner(null);
-    }
+    };
 
     return (
         <div className={classes.App}>
-            <Game currentPlayer={currentPlayer} />
-            <Board onPlay={handleOnPlay} winner={winner} scoreBoard={scoreBoard} onNewGame={handleOnNewGame} />
+            <Header currentPlayer={currentPlayer} />
+            <Board
+                onPlay={handleOnPlay}
+                winner={winner}
+                scoreBoard={scoreBoard}
+                onNewGame={handleOnNewGame}
+            />
         </div>
     );
 }
