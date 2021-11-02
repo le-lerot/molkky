@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "https://le-lerot.github.io/molky/static/css/main.263c4f26.chunk.css",
-    "main.js": "https://le-lerot.github.io/molky/static/js/main.057bc596.chunk.js",
-    "main.js.map": "https://le-lerot.github.io/molky/static/js/main.057bc596.chunk.js.map",
-    "runtime-main.js": "https://le-lerot.github.io/molky/static/js/runtime-main.6714deee.js",
-    "runtime-main.js.map": "https://le-lerot.github.io/molky/static/js/runtime-main.6714deee.js.map",
-    "static/js/2.1706dcb1.chunk.js": "https://le-lerot.github.io/molky/static/js/2.1706dcb1.chunk.js",
-    "static/js/2.1706dcb1.chunk.js.map": "https://le-lerot.github.io/molky/static/js/2.1706dcb1.chunk.js.map",
-    "static/js/3.ecbfdb69.chunk.js": "https://le-lerot.github.io/molky/static/js/3.ecbfdb69.chunk.js",
-    "static/js/3.ecbfdb69.chunk.js.map": "https://le-lerot.github.io/molky/static/js/3.ecbfdb69.chunk.js.map",
+    "main.js": "https://le-lerot.github.io/molky/static/js/main.d4313855.chunk.js",
+    "main.js.map": "https://le-lerot.github.io/molky/static/js/main.d4313855.chunk.js.map",
+    "runtime-main.js": "https://le-lerot.github.io/molky/static/js/runtime-main.b58d9736.js",
+    "runtime-main.js.map": "https://le-lerot.github.io/molky/static/js/runtime-main.b58d9736.js.map",
+    "static/js/2.18746d86.chunk.js": "https://le-lerot.github.io/molky/static/js/2.18746d86.chunk.js",
+    "static/js/2.18746d86.chunk.js.map": "https://le-lerot.github.io/molky/static/js/2.18746d86.chunk.js.map",
+    "static/js/3.bfb929e2.chunk.js": "https://le-lerot.github.io/molky/static/js/3.bfb929e2.chunk.js",
+    "static/js/3.bfb929e2.chunk.js.map": "https://le-lerot.github.io/molky/static/js/3.bfb929e2.chunk.js.map",
     "index.html": "https://le-lerot.github.io/molky/index.html",
     "static/css/main.263c4f26.chunk.css.map": "https://le-lerot.github.io/molky/static/css/main.263c4f26.chunk.css.map",
-    "static/js/2.1706dcb1.chunk.js.LICENSE.txt": "https://le-lerot.github.io/molky/static/js/2.1706dcb1.chunk.js.LICENSE.txt"
+    "static/js/2.18746d86.chunk.js.LICENSE.txt": "https://le-lerot.github.io/molky/static/js/2.18746d86.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6714deee.js",
-    "static/js/2.1706dcb1.chunk.js",
+    "static/js/runtime-main.b58d9736.js",
+    "static/js/2.18746d86.chunk.js",
     "static/css/main.263c4f26.chunk.css",
-    "static/js/main.057bc596.chunk.js"
+    "static/js/main.d4313855.chunk.js"
   ]
 }
