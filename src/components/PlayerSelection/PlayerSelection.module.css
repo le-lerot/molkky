@@ -1,0 +1,49 @@
+.title {
+    color: #fff;
+    text-align: center;
+}
+
+.playerList {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.playerListItem {
+    margin: 0.5em;
+    padding: 0.4em 1em;
+    border: 1px solid #fff;
+    border-radius: 1em;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.playerListItem.selected {
+    background-color: #fff;
+    color: rgb(9, 54, 9);
+}
+
+.playerListItem:hover {
+    cursor: pointer;
+}
+
+.playerListItemButton {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.playerListItemButton:hover {
+    color: red;
+}
+
+.playerListItem.selected button {
+    background-color: #fff;
+    color: rgb(9, 54, 9);
+}
