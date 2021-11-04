@@ -1,7 +1,7 @@
 import Board from './components/Board/Board';
 import Header from './components/Header/Header';
 import classes from './App.module.css';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 //import { shuffleArray } from './utils/helpers';
 
 const players = [
