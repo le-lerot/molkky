@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "https://le-lerot.github.io/molkky/static/css/main.e245dc68.chunk.css",
-    "main.js": "https://le-lerot.github.io/molkky/static/js/main.651ab371.chunk.js",
-    "main.js.map": "https://le-lerot.github.io/molkky/static/js/main.651ab371.chunk.js.map",
+    "main.css": "https://le-lerot.github.io/molkky/static/css/main.3938d583.chunk.css",
+    "main.js": "https://le-lerot.github.io/molkky/static/js/main.861dded9.chunk.js",
+    "main.js.map": "https://le-lerot.github.io/molkky/static/js/main.861dded9.chunk.js.map",
     "runtime-main.js": "https://le-lerot.github.io/molkky/static/js/runtime-main.888bb2ca.js",
     "runtime-main.js.map": "https://le-lerot.github.io/molkky/static/js/runtime-main.888bb2ca.js.map",
     "static/js/2.12ca80e0.chunk.js": "https://le-lerot.github.io/molkky/static/js/2.12ca80e0.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.845c3e16.chunk.js": "https://le-lerot.github.io/molkky/static/js/3.845c3e16.chunk.js",
     "static/js/3.845c3e16.chunk.js.map": "https://le-lerot.github.io/molkky/static/js/3.845c3e16.chunk.js.map",
     "index.html": "https://le-lerot.github.io/molkky/index.html",
-    "static/css/main.e245dc68.chunk.css.map": "https://le-lerot.github.io/molkky/static/css/main.e245dc68.chunk.css.map",
+    "static/css/main.3938d583.chunk.css.map": "https://le-lerot.github.io/molkky/static/css/main.3938d583.chunk.css.map",
     "static/js/2.12ca80e0.chunk.js.LICENSE.txt": "https://le-lerot.github.io/molkky/static/js/2.12ca80e0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.888bb2ca.js",
     "static/js/2.12ca80e0.chunk.js",
-    "static/css/main.e245dc68.chunk.css",
-    "static/js/main.651ab371.chunk.js"
+    "static/css/main.3938d583.chunk.css",
+    "static/js/main.861dded9.chunk.js"
   ]
 }
