@@ -1,5 +1,5 @@
 .title {
-    color: #fff;
+    color: black;
     text-align: center;
 }
 
@@ -16,16 +16,11 @@
 .playerListItem {
     margin: 0.5em;
     padding: 0.4em 1em;
-    border: 1px solid #fff;
-    border-radius: 1em;
-    color: #fff;
     display: flex;
     justify-content: space-around;
-}
-
-.playerListItem.selected {
-    background-color: #fff;
-    color: rgb(9, 54, 9);
+    border-radius: 50px;
+    border: 1px solid black;
+    box-shadow: 0px 4px 0px black;
 }
 
 .playerListItem:hover {
@@ -35,15 +30,11 @@
 .playerListItemButton {
     border: none;
     background-color: transparent;
-    color: #fff;
+    color: black;
     cursor: pointer;
+    box-shadow: 0px 0px;
 }
 
 .playerListItemButton:hover {
     color: red;
-}
-
-.playerListItem.selected button {
-    background-color: #fff;
-    color: rgb(9, 54, 9);
 }
